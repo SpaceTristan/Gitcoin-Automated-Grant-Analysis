@@ -23,10 +23,10 @@ def valid_wallet(row, score, comments):
     return comments, score; 
 
 def check_links_in_desc(row, score, comments):
+    #checks description for links and will identify if they are valid connections or not
     desc = row["description"]
-    mentioned_websites = re.findall("(?P<url>https?:[^\s]+)", desc)
-
     try:
+        mentioned_websites = re.findall("(?P<url>https?:[^\s]+)", desc)
         for site in mentioned_websites:
             try:    
                 website_status = requests.head(site, timeout=2).status_code
@@ -42,6 +42,7 @@ def check_links_in_desc(row, score, comments):
     except:
         score+=1
         comments.append("No external links found in description.")
+
     return comments, score;
 
 

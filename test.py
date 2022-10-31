@@ -9,10 +9,9 @@ YOUR_API_KEY  = os.getenv('YOUR_API_KEY')
 
 eth = Etherscan(YOUR_API_KEY)
 
-bal = eth.get_eth_balance(address="0xE7048aB8dFA7F7a80d79fD6c5AcF8B0C1d174fdF")
+bal = eth.get_eth_balance(address="address")
 
 ether_bal = int(bal)/1000000000000000000
-#349F3N32D4VNWP6E2XIQ7QH9TE5PR4S9UZ
 
 df = df[:25]
 

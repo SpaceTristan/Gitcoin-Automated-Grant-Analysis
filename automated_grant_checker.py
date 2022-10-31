@@ -1,4 +1,4 @@
-# This app performs analysis on the gitcoin application json files 
+# This app performs analysis on the gitcoin grant json files 
 # The analysis includes reviews of offchain data to identify issues in submission validity
 # A score is assigned based on checks made against the twitter acounts, github existence and website response
 # A higher number means higher need of scrutiny. Lower number means less red flags
